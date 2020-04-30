@@ -1,8 +1,9 @@
+// eslint-disable-next-line
 import React from "react";
-import Counter from "./components/Counter";
+import Main from "./components/pages/main.jsx";
 
 function App() {
-  return <Counter />;
+  return <Main />;
 }
 
 export default App;
