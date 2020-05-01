@@ -12,6 +12,7 @@ const DataInTable = () => {
 	return (
 		<tbody>
 			{context.employeeState.filterEmployees.map(
+                //deconstructing
 				({ name, picture, phone, email, dob }) => {
 					return (
 						<tr>

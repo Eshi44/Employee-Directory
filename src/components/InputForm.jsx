@@ -10,7 +10,7 @@ const InputForm = () => {
 		<input
 			className="form-control mr-sm-6"
 			type="search"
-			placeholder="search for employee"
+			placeholder="search employee name"
 			aria-label="Search"
 			//handle onChange for event-input of search name
 			onChange={(e) => context.handleSearchChange(e)}

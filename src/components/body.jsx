@@ -10,13 +10,6 @@ const Body = () => {
 	const [employeeState, setemployeeState] = useState({
 		employee: [],
 		filterEmployees: [],
-		headings: [
-			{ name: "image" },
-			{ name: "name" },
-			{ name: "phone" },
-			{ name: "email" },
-			{ name: "dob" },
-		],
 	});
 
 	//handle change on search from input box
