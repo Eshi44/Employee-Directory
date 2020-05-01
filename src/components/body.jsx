@@ -27,8 +27,8 @@ const Body = () => {
 	};
 
 	//api call - useeffect is a hook to use in place of lifecylce methd ComponentDidMount for functional component
-    // setemployeessate for employee state, empoloyee, and filteredemployees
-    useEffect(() => {
+	// setemployeessate for employee state, empoloyee, and filteredemployees
+	useEffect(() => {
 		API.getAllUsers().then((results) => {
 			setemployeeState({
 				...employeeState,
@@ -39,7 +39,7 @@ const Body = () => {
 	}, []);
 
 	return (
-        //create context.provider - pass in employee state and handlesearch
+		//create context.provider - pass in employee state and handlesearch
 		<CreateContext.Provider value={{ employeeState, handleSearchChange }}>
 			<NavBar />
 			<div>
