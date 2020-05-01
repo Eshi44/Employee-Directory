@@ -6,10 +6,26 @@ const Table = () => {
 	// eslint-disable-next-line no-unused-vars
 	const context = useContext(CreateContext);
 	return (
-		<div className="datatable mt-5">
-            {/* hover effect */}
-			<table className="table table-striped table-hover table-condensed">
-                {/* import DataTable */}
+		<div className="datatable">
+			<table className="table">
+				<tr>
+					{context.employeeState.headings.map(({ name }) => {
+						return (
+							<th
+								className="col"
+								key={name}
+								onClick={() => {
+									context.handleSort(name);
+								}}
+							>
+								{name}
+								<span className="pointer"></span>
+							</th>
+						);
+					})}
+				</tr>
+
+				{/* import DataTable */}
 				<DataInTable />
 			</table>
 		</div>

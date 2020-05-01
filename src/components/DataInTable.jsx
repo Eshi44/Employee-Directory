@@ -1,45 +1,45 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
 //import react, createContext and useContext
 // eslint-disable-next-line no-unused-vars
 import React, { useContext } from "react";
 import CreateContext from "../utils/CreateContext";
 
 const DataInTable = () => {
-    // eslint-disable-next-line no-unused-vars
-    const context = useContext(CreateContext);
+	// eslint-disable-next-line no-unused-vars
+	const context = useContext(CreateContext);
 
-    return(
-
-<table className="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-
-    );
-}
+	return (
+		<tbody>
+			{context.employeeState.filterEmployees[0] !== undefined &&
+			context.employeeState.filterEmployees[0].name !== undefined ? (
+				context.employeeState.filterEmployees.map(
+					({ name, picture, phone, email, dob }) => {
+						return (
+							<tr>
+								<td data="Image">
+									<img src={picture.large} />
+								</td>
+								<td data="Name">
+									{name.first} {name.last}
+								</td>
+								<td data="Phone">
+									{phone}
+								</td>
+								<td data="Email">
+									<a href="">{email}</a>
+								</td>
+								<td data="DOB">
+									{dob.age}
+								</td>
+							</tr>
+						);
+					}
+				)
+			) : (
+				<></>
+			)}
+		</tbody>
+	);
+};
 export default DataInTable;
