@@ -7,9 +7,8 @@ const SearchName = () => {
 		<div className="searchbox">
 			<div className="input-group">
 				<div className="input-group-prepend">
-					<span className="input-group-text">Search Employee</span>
 				</div>
-				<InputForm></InputForm>
+				<InputForm />
 			</div>
 		</div>
 	);

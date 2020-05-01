@@ -14,9 +14,7 @@ const Table = () => {
 							<th
 								className="col"
 								key={name}
-								onClick={() => {
-									context.sorting(name);
-								}}
+
 							>
 								{name}
 							</th>

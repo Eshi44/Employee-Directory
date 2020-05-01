@@ -11,33 +11,24 @@ const DataInTable = () => {
 
 	return (
 		<tbody>
-			{context.employeeState.filterEmployees[0] !== undefined &&
-			context.employeeState.filterEmployees[0].name !== undefined ? (
-				context.employeeState.filterEmployees.map(
-					({ name, picture, phone, email, dob }) => {
-						return (
-							<tr>
-								<td data="Image">
-									<img src={picture.large} />
-								</td>
-								<td data="Name">
-									{name.first} {name.last}
-								</td>
-								<td data="Phone">
-									{phone}
-								</td>
-								<td data="Email">
-									<a href="">{email}</a>
-								</td>
-								<td data="DOB">
-									{dob.age}
-								</td>
-							</tr>
-						);
-					}
-				)
-			) : (
-				<></>
+			{context.employeeState.filterEmployees.map(
+				({ name, picture, phone, email, dob }) => {
+					return (
+						<tr>
+							<td data="Image">
+								<img src={picture.large} />
+							</td>
+							<td data="Name">
+								{name.first} {name.last}
+							</td>
+							<td data="Phone">{phone}</td>
+							<td data="Email">
+								<a href="">{email}</a>
+							</td>
+							<td data="DOB">{dob.age}</td>
+						</tr>
+					);
+				}
 			)}
 		</tbody>
 	);
