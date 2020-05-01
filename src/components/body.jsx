@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useContext } from "react";
-import createContext from "src/components/createContext.jsx";
+import createContext from "./createContext.jsx";
 
 const MainData = () => {
     // eslint-disable-next-line no-unused-vars
