@@ -2,13 +2,14 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useContext } from "react";
 import CreateContext from "../utils/CreateContext";
+
 //input form within navbar
 const InputForm = () => {
 	const context = useContext(CreateContext);
 
 	return (
 		<input
-			className="form-control mr-sm-6"
+			className="form-control"
 			type="search"
 			placeholder="search employee name"
 			aria-label="Search"
