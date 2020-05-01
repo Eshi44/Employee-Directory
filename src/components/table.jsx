@@ -15,11 +15,10 @@ const Table = () => {
 								className="col"
 								key={name}
 								onClick={() => {
-									context.handleSort(name);
+									context.sorting(name);
 								}}
 							>
 								{name}
-								<span className="pointer"></span>
 							</th>
 						);
 					})}

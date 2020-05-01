@@ -6,7 +6,8 @@ import Body from "../../components/Body";
 function Main() {
 	return (
 		<>
-			<Body></Body>
+        
+			<Body />
 		</>
 	);
 }
