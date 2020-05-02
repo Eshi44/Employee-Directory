@@ -23,5 +23,6 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 * CSS
 * React-Dom
 * Random User API
+* JSX
 
 
