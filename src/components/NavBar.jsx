@@ -8,9 +8,11 @@ function NavBar() {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="collapse navbar-collapse row">
-				<div className="search-area col-3">
+				<div className="search-area col-6">
 					<SearchName /> 
-					<SearchLocation />
+				</div>
+				<div className="search-area col-6">
+					 <SearchLocation />
 				</div>
 			</div>
 		</nav>
