@@ -13,7 +13,7 @@ const DataInTable = () => {
 		<tbody>
 			{context.employeeState.filterEmployees.map(
                 //deconstructing
-				({ name, picture, phone, email, dob }) => {
+				({ name, picture, phone, email, location }) => {
 					return (
 						<tr>
 							<td data="Image">
@@ -26,7 +26,7 @@ const DataInTable = () => {
 							<td data="Email">
 								<a href="">{email}</a>
 							</td>
-							<td data="DOB">{dob.age}</td>
+							<td data="DOB">{location.state}</td>
 						</tr>
 					);
 				}

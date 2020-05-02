@@ -12,35 +12,53 @@ const Body = () => {
 		filterEmployees: [],
 	});
 
-	//handle change on search from input box
+	//handle change on search from input box -NAME
 	const handleSearchChange = (event) => {
 		const filter = event.target.value;
-		const finalFilter = employeeState.employee.filter((item) => {
+		const finalFilter = employeeState.employee.filter((name) => {
 			let lowercaseFirstAndLastName =
-				item.name.first.toLowerCase() + " " + item.name.last.toLowerCase();
+				name.name.first.toLowerCase() + " " + name.name.last.toLowerCase();
 			if (lowercaseFirstAndLastName.indexOf(filter.toLowerCase()) !== -1) {
-				return item;
+				return name;
 			}
 		});
 		//spread- set state
 		setemployeeState({ ...employeeState, filterEmployees: finalFilter });
 	};
 
+	//handle change on search from input box -AGE
+	const handleSearchChangeLocation = (event) => {
+		
+		const filterAge = event.target.value;
+		const finalFilterAge = employeeState.employee.filter((dob) => {
+			let age =
+			dob.location.state.toLowerCase();
+			if (age.indexOf(filterAge.toLowerCase()) !== -1) {
+				return dob;
+			}
+		});
+		//spread- set state
+		setemployeeState({ ...employeeState, filterEmployees: finalFilterAge });
+
+	};
+
 	//api call - useeffect is a hook to use in place of lifecylce methd ComponentDidMount for functional component
 	// setemployeessate for employee state, empoloyee, and filteredemployees
 	useEffect(() => {
 		API.getAllUsers().then((results) => {
+			console.log(results.data.results);
 			setemployeeState({
 				...employeeState,
 				employee: results.data.results,
 				filterEmployees: results.data.results,
 			});
+			
 		});
 	}, []);
 
 	return (
 		//create context.provider - pass in employee state and handlesearch
-		<CreateContext.Provider value={{ employeeState, handleSearchChange }}>
+		<CreateContext.Provider value={{ employeeState, handleSearchChange, handleSearchChangeLocation }}>
 			<NavBar />
 			<div>
 				<Table />
