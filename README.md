@@ -14,6 +14,8 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 ## Employee Directory
 
+![employee-directory](img/employee-directory.gif)
+
 ![employee-directory](img/employee-directory.jpg)
 
 ## Technology 
