@@ -1,7 +1,8 @@
-# Employee-Directory
+# EmployeeDirectory
+
 ## Overview
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+Users can filter employees within this employee directory by either first name, last name, or location. Simply type in the input box and the table will begin to filter.
 
 ## User Story
 
@@ -14,5 +15,13 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 ## Employee Directory
 
 ![employee-directory](img/employee-directory.jpg)
+
+## Technology 
+* React
+* Axios
+* HTML
+* CSS
+* React-Dom
+* Random User API
 
 
