@@ -1,5 +1,5 @@
 import React from "react";
-import DataInTable from "../components/DataInTable";
+import DataInTable from "./DataInTable";
 
 const Table = () => {
 	// eslint-disable-next-line no-unused-vars

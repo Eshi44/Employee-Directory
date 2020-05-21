@@ -1,9 +1,9 @@
 /* eslint-disable array-callback-return */
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import API from "../utils/API";
-import Table from "../components/Table";
-import NavBar from "../components/NavBar";
+import Table from "./Table";
+import NavBar from "./NavBar";
 import CreateContext from "../utils/CreateContext";
 
 const Body = () => {
@@ -29,16 +29,16 @@ const Body = () => {
 	//handle change on search from input box -AGE
 	const handleSearchChangeLocation = (event) => {
 		
-		const filterAge = event.target.value;
-		const finalFilterAge = employeeState.employee.filter((dob) => {
-			let age =
-			dob.location.state.toLowerCase();
-			if (age.indexOf(filterAge.toLowerCase()) !== -1) {
-				return dob;
+		const filterLocation = event.target.value;
+		const finalFilterLocation = employeeState.employee.filter((geo) => {
+			let local =
+			geo.location.state.toLowerCase();
+			if (local.indexOf(filterLocation.toLowerCase()) !== -1) {
+				return geo;
 			}
 		});
 		//spread- set state
-		setemployeeState({ ...employeeState, filterEmployees: finalFilterAge });
+		setemployeeState({ ...employeeState, filterEmployees: finalFilterLocation });
 
 	};
 

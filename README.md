@@ -1,8 +1,6 @@
-# EmployeeDirectory
+# Employee Directory  💼👔
 
-## Overview
-
-Users can filter employees within this employee directory by either first name, last name, or location. Simply type in the input box and the table will begin to filter.
+Users can filter employees within this employee directory by either first name, last name, or location. Simply search an employee using the input box and the table will begin to filter.
 
 ## User Story
 
