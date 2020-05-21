@@ -9,7 +9,7 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 Try it out!
 
-[Employee Directory](https://third-wave-coffee-app.herokuapp.com/)
+[Employee Directory](https://employee-directory-finder.herokuapp.com/)
 
 
 # User Story
