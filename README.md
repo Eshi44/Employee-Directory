@@ -41,6 +41,7 @@ THEN I will be presented with employees at the specified location
 - NPM:
   - axios
   - concurrently
+  - dotenv
   - if-env
   - nodemon
   - react
